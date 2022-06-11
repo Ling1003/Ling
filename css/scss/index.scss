@@ -1,0 +1,681 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container{
+    //中間容器正常範圍 960~1440
+    max-width: 1120px;  //卡片260px，中間距離16px->(260*4)+(16*3)
+    margin: 0 auto; //居中
+    padding: 0 20px;
+
+}
+
+//header
+
+.index-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    margin-bottom: 30px;
+    
+    .price{
+        padding: 8px 32px;
+        color: #fff;
+        display: block;
+        background: #FF5D50;
+        border-radius: 50px;
+        &:hover{
+            color: #FF5D50;
+            background: #fff;
+            border: 2px solid #FF5D50;
+        }
+    }
+
+    
+    h1{
+        width: 218px;
+       
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    }
+}
+
+.yellow{
+	position: absolute;
+	width: 860px;
+	height: 786px;
+	top:0px;
+	right: 0px;
+	background-image:url(/img/bg_yellow.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+	z-index: -1;
+}
+
+.top-logo{
+    display: block;
+    width: 71px;
+    height: 71px;
+    position: fixed;
+    right: 48px;
+    bottom: 32px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+.banner{
+    display: flex;
+    justify-content: end;
+    padding: 30px 20px;
+    line-height: 1.5;
+
+    .banner-content{
+        padding-top: 100px;
+        padding-right: 100px;
+
+       h2{
+        color: #56C4C5;
+        font-size: 18px;
+        padding-bottom: 8px;
+       } 
+
+       h3{
+        font-weight: 600;
+          font-size: 48px;
+          padding-bottom: 16px;
+       }
+
+       p{
+        font-size: 20px;
+       }
+    }
+    
+    img{
+       
+        width: 532px;
+       height: auto;
+       max-width: 100%;
+    left: -200px;
+    
+    }
+
+}
+
+
+
+@media(max-width:767px){
+
+
+    .index-header{
+        border-bottom: 2px solid #FFD153;
+    }
+    
+    .yellow{
+      
+        top: 300px;
+         left: 8px;
+         width: 350px;
+         height: 305px;
+         background-image:url(/img/small_bg.svg);
+         z-index: -1;
+
+}
+
+
+    .banner{
+        display: block;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding-bottom: 100px;
+        padding-top: 10px;
+  
+        
+   
+     img{
+      
+        left: 8px;
+        width: 350px;
+        height: 305px;
+        position: absolute;
+        top: 150px;
+       
+     }
+
+     .banner-content{
+        position: relative;
+        top: -120px;
+
+        h2{
+            color: #56C4C5;
+            font-size: 16px;
+            padding-bottom: 5px;
+           } 
+    
+           h3{
+            font-weight: 600;
+              font-size: 32px;
+              padding-bottom: 5px;
+           }
+    
+           p{
+            font-size: 16px;
+           }
+     }
+ 
+ }
+
+}
+
+
+//社群網站
+.community{
+    text-align: center;
+    line-height: 1.5;
+    padding-bottom: 100px;
+    position: relative;
+
+    h3{
+        font-size: 32px;
+        font-weight: 600;
+        padding-bottom: 48px;
+    }
+
+
+    .communityItem{
+        display: flex;
+        justify-content: space-around;
+
+        img{
+            padding-bottom: 24px;
+        }
+
+        h5{
+            font-size: 24px;
+            padding-bottom: 24px;
+            font-weight: 600;
+          }
+     
+          p{
+              font-size: 16px;
+              color: #747474;
+          }
+    }
+
+  
+  
+}
+
+
+@media (max-width:767px) {
+    .community{
+     
+        line-height: 1.5;
+        padding-bottom: 60px;
+    
+        h3{
+            font-size: 32px;
+            font-weight: 600;
+            padding-bottom: 48px;
+            padding-top: 100px;
+        }
+    
+    
+        .communityItem{
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        
+            img{
+                padding-bottom: 16px;
+            }
+    
+            h5{
+                font-size: 24px;
+                padding-bottom: 16px;
+                font-weight: 600;
+              }
+         
+              p{
+                  font-size: 16px;
+                  color: #747474;
+                  padding-bottom: 16px;
+              }
+        }
+
+}
+}
+
+//角色
+
+.role-card{
+    text-align: center;
+    line-height: 1.5;
+    h3{
+        font-size: 32px;
+        font-weight: 600;
+        padding-bottom: 16px;
+    }
+
+    p{
+        font-size: 20px;
+        padding-bottom: 48px;
+    }
+}
+
+.carditem{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    line-height: 1.5;
+
+    h5{
+        color: #56C4C5;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 16px;
+    }
+
+    p{
+        font-size: 16px;
+        margin: 16px 16px 24px;
+    }
+}
+
+.cardcontent{
+    width: 260px;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+@media (max-width:767px) {
+    .carditem{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .cardcontent{
+        margin: 24px;
+    }
+
+}
+
+
+
+
+//計畫
+.plan{
+    display: flex;
+    align-items: center;
+   
+    .planitem{
+        display: flex;
+         flex-wrap: wrap;
+         width: 50%;
+
+   
+     
+       .planli{
+        width: 40%;
+    padding: 32px 32px 48px 32px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px #00000014;
+    margin-right: 47px;
+    margin-bottom: 28px;
+
+    
+    img{
+        box-shadow: 0px 2px 10px #00000014;
+        border-radius: 50%;
+        padding: 17px 19px 17px 15px; 
+        width: 86px;
+        height: 86px;
+        margin-bottom: 24px;
+     }
+
+         h4{
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+         }
+
+         p{
+            font-size: 16px;
+           line-height: 1.5;
+         }
+       
+     }
+
+    }  
+
+    .plan-content{
+
+        padding-left: 137px;
+        h6{
+            font-size: 32px;
+            padding-bottom: 16px;
+        }
+
+        p{
+            font-size: 18px;
+            line-height: 1.5;
+            padding-bottom: 24px;
+        }
+
+        a{
+            background: #56C4C5;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 32px;
+            
+        }
+    }
+}
+
+
+
+@media (max-width:767px) {
+    .plan{
+             display: flex;
+            justify-content: space-around;
+            flex-direction: column-reverse;
+            padding-bottom: 16px;
+            
+       
+        .planitem{
+            
+             width: 100%;
+             display: flex;
+             justify-content: center;
+             padding-bottom: 24px;
+             
+         
+           .planli{
+           
+
+            width: 60%;
+            padding: 32px 32px 48px 32px;
+            border-radius: 12px;
+            box-shadow: 0px 2px 10px #00000014;
+            margin: 32px 24px 24px 24px;
+            
+        
+        img{
+            box-shadow: 0px 2px 10px #00000014;
+            border-radius: 50%;
+            
+
+         }
+    
+             h4{
+                font-size: 18px;
+                font-weight: 600;
+           
+             }
+    
+             p{
+                font-size: 16px;
+               line-height: 1.5;
+             }
+           
+         }
+    
+        } 
+
+        .plan-content{
+            flex-direction: column;
+        align-items: center;
+            padding-left: 80px;
+            
+          
+            h6{
+                font-size: 32px;
+                padding-bottom: 16px;
+                padding-top: 60px;
+                font-weight: 600;
+            }
+    
+            p{
+                font-size: 18px;
+                line-height: 1.5;
+                padding-bottom: 16px;
+            }
+    
+            a{
+                background: #56C4C5;
+                color: white;
+                border-radius: 50px;
+                padding: 12px 32px;
+                
+            }
+        }
+
+}
+}
+
+//好評
+.comment{
+    position: relative;
+    line-height: 1.5;
+     .ball3{
+    width: 150px;
+    position: absolute;
+    z-index: -1;
+    left: -60px;
+    top: 50px;
+    
+ }
+    .good{
+            text-align: center;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 104px;
+        }
+
+        .goodcard{
+                display: flex;
+                justify-content: space-around;
+                         
+            }
+
+   .gooditem{
+    width: 288px;
+    background: #FFFFFF;
+    position: relative;
+    padding: 48px 32px 24px;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+       }
+
+       .goodimg{
+          position: absolute;
+          width: 80px;
+          height: 80px;
+          top: -40px;
+     
+       } 
+
+       .star-block{
+      display: flex;
+      justify-content: space-around;
+    
+      .name{
+       padding-right: 20px;
+       padding-top: 10px;
+      }
+
+      .star{     
+        padding-top: 10px;
+        
+      }
+
+     } 
+   
+    }
+
+
+.comment-choose {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 100px;
+
+    li{
+        width: 10px;
+        height: 10px;
+        background-color: #DDD;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+        &:hover{
+            background: #FFD153;
+        }
+    }
+
+    
+
+  }
+  .comment-choose :last-of-type {
+    width: 16px;
+    border-radius: 15px;
+    background: #FFD153;
+}
+
+  
+  @media (max-width:767px) {
+  
+    .goodcard{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .gooditem{
+     
+            margin: 24px;
+          
+    }
+
+
+}
+
+
+footer{
+    background: #F5F5F5;
+    text-align: center;
+    p{
+        padding: 16px;
+    }
+}
+
+
+.footer-plan{
+    background-image: url(/img/bg.png) ;
+     height: 503px;
+    // padding: 260px 0 197px 100px;  //上下px，左右%
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+     text-align: center;
+
+     h2{
+        padding-top: 260px;
+        padding-bottom: 48px;
+     }
+
+     a{
+         background: #56C4C5;
+         color: white;
+         border-radius: 50px;
+         padding: 12px 32px;
+     }
+
+}
+
+
+@media(max-width:767px){
+    .footer-plan{
+        background-image: url(/img/bg.png) ;
+         height: 461px;
+        // padding: 260px 0 197px 100px;  //上下px，左右%
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+         text-align: center;
+	}
+
+}
+
+
+
+
